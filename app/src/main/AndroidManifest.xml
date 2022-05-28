@@ -12,10 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Submission2">
         <activity
-            android:name=".DetailUserActivity" />
+            android:name=".ui.details.DetailUserActivity" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
+            android:name=".ui.main.MainActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.favorite.FavoriteActivity"
+            android:exported="false"/>
         <activity
             android:name=".SplashScreen"
             android:exported="true"

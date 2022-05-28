@@ -1,4 +1,4 @@
-package com.dicoding.submission2
+package com.dicoding.submission2.ui.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

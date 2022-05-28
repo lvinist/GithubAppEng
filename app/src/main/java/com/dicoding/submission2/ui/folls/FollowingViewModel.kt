@@ -1,4 +1,4 @@
-package com.dicoding.submission2
+package com.dicoding.submission2.ui.folls
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -10,19 +10,19 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class FollowersViewModel: ViewModel() {
-    val listFollowers = MutableLiveData<ArrayList<User>>()
+class FollowingViewModel : ViewModel() {
+    val listFollowing = MutableLiveData<ArrayList<User>>()
 
-    fun setListFollowers(username: String){
+    fun setListFollowing(username: String) {
         RetrofitClient.apiInstance
-            .getFollowers(username)
-            .enqueue(object : Callback<ArrayList<User>>{
+            .getFollowing(username)
+            .enqueue(object : Callback<ArrayList<User>> {
                 override fun onResponse(
                     call: Call<ArrayList<User>>,
                     response: Response<ArrayList<User>>
                 ) {
-                    if (response.isSuccessful){
-                        listFollowers.postValue(response.body())
+                    if (response.isSuccessful) {
+                        listFollowing.postValue(response.body())
                     }
                 }
 
@@ -33,7 +33,7 @@ class FollowersViewModel: ViewModel() {
             })
     }
 
-    fun getListFollowers(): LiveData<ArrayList<User>>{
-        return listFollowers
+    fun getListFollowing(): LiveData<ArrayList<User>> {
+        return listFollowing
     }
 }

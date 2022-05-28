@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailUserActivity">
+    tools:context=".ui.details.DetailUserActivity">
 
     <ImageView
         android:id="@+id/profile"
@@ -21,7 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         tools:text="TextView"
-        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/profile"
@@ -34,7 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         tools:text="TextView"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintStart_toStartOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -56,7 +54,6 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
-            android:textColor="@color/black"
             android:textSize="14sp"
             app:drawableStartCompat="@drawable/ic_orang"
             tools:layout_editor_absoluteX="57dp"
@@ -68,7 +65,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:textColor="@color/black"
             android:textSize="14sp"
             tools:layout_editor_absoluteX="57dp"
             tools:layout_editor_absoluteY="146dp"
@@ -79,7 +75,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:textColor="@color/black"
             android:textSize="14sp"
             tools:layout_editor_absoluteX="57dp"
             tools:layout_editor_absoluteY="146dp"
@@ -93,13 +88,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:tabTextColor="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -139,5 +132,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_fav_toggle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:checkable="true"
+        app:icon="@drawable/fav_toggle"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/design_default_color_primary"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
